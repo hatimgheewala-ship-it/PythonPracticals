@@ -1,11 +1,35 @@
-#add the values and print the average
 
-income1=3999
-income2=3343
-income3=2345
-income4=2222
-income5=1
-total_income=income1+income2+income3+income4+income5
-print("The total income is ",total_income)
-average=total_income/5
-print("The average income is ",average)
+field1 = int(input("Enter yield from field 1 (kg): "))
+field2 = int(input("Enter yield from field 2 (kg): "))
+field3 = int(input("Enter yield from field 3 (kg): "))
+field4 = int(input("Enter yield from field 4 (kg): "))
+field5 = int(input("Enter yield from field 5 (kg): "))
+
+total = field1 + field2 + field3 + field4 + field5
+average = total / 5
+
+bags = total // 25
+leftover = total % 25
+
+print("Total harvest:", total, "kg")
+print("Average yield:", average, "kg")
+print("Full 25 kg bags:", bags)
+print("Leftover grain:", leftover, "kg")
+
+last_year = int(input("Enter last year's harvest (kg): "))
+
+if total > last_year:
+    print("Harvest increased by", total - last_year, "kg")
+elif total < last_year:
+    print("Harvest decreased by", last_year - total, "kg")
+else:
+    print("Harvest is the same as last year")
+
+bonus = int(input("Enter bonus crop (kg): "))
+total = total + bonus
+
+seed = int(input("Enter seed reserve (kg): "))
+remaining = total - seed
+
+print("Updated total harvest:", total, "kg")
+print("Harvest after seed reserve:", remaining, "kg")
