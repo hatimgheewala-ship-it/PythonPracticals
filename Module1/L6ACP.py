@@ -1,6 +1,15 @@
-ch = input("Enter a character: ")
+swimmer = input("Can the swimmer swim? (yes/no): ").lower()
+age = int(input("Enter the swimmer's age: "))
+supervision = input("Is an instructor present? (yes/no): ").lower()
 
-if (ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z'):
-    print("The character is an Alphabet")
+if swimmer == "yes" and age >= 12:
+    print("Allowed in the deep end.")
+
+elif swimmer == "yes" and age < 12 and supervision == "yes":
+    print("Allowed in the shallow pool with an instructor.")
+
+elif swimmer == "no" or not (supervision == "yes"):
+    print("Shallow pool only. Adult supervision is required.")
+
 else:
-    print("The character is Not an Alphabet")
+    print("Shallow pool only. Ask a lifeguard for help.")
