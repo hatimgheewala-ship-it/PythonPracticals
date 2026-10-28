@@ -1,11 +1,18 @@
-#let's store birthdays
+import keyword
 
-friend1=input("Tell me the birthday of friend 1")
-friend2=input("Tell me the birthday of friend 1")
-friend3=input("Tell me the birthday of friend 1")
+name = input("What is your name? ")
+goal = input("What is your goal? ")
+deadline = input("When do you want to achieve it? ")
 
-print("You have provided me 3 birthdays of your three friends and they are as below :")
+print("\n----- MY GOAL PLAN -----")
+print("Name:", name, end=" | ")
+print("Goal:", goal)
+print("Deadline:", deadline)
 
-print("Friend 1's Birthday is ",friend1)
-print("Friend 2's Birthday is ",friend2)
-print("Friend 3's Birthday is ",friend3)
+print("\nMy plan:\n")
+print("Name:", name)
+print("Goal:", goal)
+print("Deadline:", deadline)
+
+print("\nPython reserved keywords:")
+print(keyword.kwlist)
