@@ -1,26 +1,15 @@
-#check whether the provided value is boolean or not
+weather = input("Is it sunny, rainy, or cloudy? ").lower()
+homework = input("Have you finished your homework? ").lower()
+day = input("Is it a weekday or weekend? ").lower()
 
-x = 5
-y = 0
-z = 8
+if weather == "sunny" and homework == "yes" and day == "weekend":
+    print("Best plan: Go outside and enjoy the day!")
 
-# Checking boolean values
-if x and y and z:
-    print("All the values are True")
+elif (weather == "rainy" or weather == "cloudy") and not homework == "yes":
+    print("Best plan: Stay inside and finish your homework.")
+
+elif weather == "sunny" and homework == "yes":
+    print("Best plan: Enjoy some outdoor activities.")
+
 else:
-    print("At least one value is False")
-
-# Checking positive numbers using OR
-p = -4
-q = 9
-r = -2
-
-if p > 0 or q > 0:
-    print("At least one number is positive")
-else:
-    print("No number is positive")
-
-if p > 0 or r > 0:
-    print("At least one number is positive")
-else:
-    print("No number is positive")
+    print("Best plan: Finish your work and relax at home.")
